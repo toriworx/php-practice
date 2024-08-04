@@ -11,7 +11,9 @@ for ($i = 1; $i <= 100; $i++) {
       echo $i . "\n";
   }
 }
+?>
 
+<?php
 // Q2 多次元連想配列
 $personalInfos = [
   [
@@ -30,7 +32,9 @@ $personalInfos = [
       'tel'  => '09055556666'
   ],
 ];
+?>
 
+<?php
 //問題1
 foreach ($personalInfos as $person) {
   if ($person['name'] === 'Bさん') {
@@ -39,11 +43,13 @@ foreach ($personalInfos as $person) {
   }
 }
 
+
 //問題2
 foreach ($personalInfos as $index => $person) {
   $number = $index + 1;
   echo "{$number}番目の{$person['name']}のメールアドレスは{$person['mail']}で、電話番号は{$person['tel']}です。\n";
 }
+?>
 
 //問題3
 $ageList = [25, 30, 18];
@@ -51,6 +57,9 @@ $ageList = [25, 30, 18];
 foreach ($personalInfos as $index => $person) {
     $personalInfos[$index]['age'] = $ageList[$index];
 }
+?>
+
+<?php
 // Q3 オブジェクト-1
 
 class Student
@@ -78,7 +87,9 @@ class Student
 $student = new Student(120, '山田');
 
 $student->showStudentInfo();
+?>
 
+<?php
 // Q4 オブジェクト-2
 class Student
 {
@@ -104,8 +115,9 @@ class Student
 
 $student = new Student(120, '山田');
 $yamada->attend('PHP');
+?>
 
-
+<?php
 // Q5 定義済みクラス
 //問題1
 $date = new DateTime();
@@ -123,5 +135,4 @@ $interval = $today->diff($pastDate);
 $daysPassed =  $interval->days;
 
 echo "あの日から{$daysPassed}日経過しました。";
-
 ?>
