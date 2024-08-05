@@ -91,7 +91,7 @@ $student->showStudentInfo();
 
 <?php
 // Q4 オブジェクト-2
-class Student
+class Student_sub
 {
     public $studentId;
     public $studentName;
@@ -113,7 +113,7 @@ class Student
     }
 }
 
-$student = new Student(120, '山田');
+$student = new Student_sub(120, '山田');
 $yamada->attend('PHP');
 ?>
 
