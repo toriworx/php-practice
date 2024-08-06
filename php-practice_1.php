@@ -8,7 +8,7 @@ echo '私の名前は'.$name.'です。';
 // Q2 四則演算
 $num = 5*4;
 echo "$num\n";
-echo $num/2
+echo $num/2;
 ?>
 
 <?php
@@ -61,8 +61,8 @@ $kanto = array(
   "茨城県" => "水戸市"
 );
 
-foreach ($kanto as $key => $value) {
-  echo "$value\n";
+foreach ($kanto as $prefecture => $main_city) {
+  echo "$main_city\n";
 }
 ?>
 
@@ -96,9 +96,14 @@ $kanto = array(
   "茨城県" => "水戸市"
 );
 
-$kanto_prefectures = array("東京都", "神奈川県", "千葉県", "埼玉県", "栃木県", "群馬県", "茨城県", "愛知県", "大阪府");
+$other_prefectures = array(
+  "愛知県" => "名古屋市",
+  "大阪府" => "大阪市"
+);
 
-foreach ($kanto_prefectures as $prefecture) {
+$main_prefectures = array("東京都", "神奈川県", "千葉県", "埼玉県", "栃木県", "群馬県", "茨城県", "愛知県", "大阪府");
+
+foreach ($main_prefectures as $prefecture) {
   if (array_key_exists($prefecture, $kanto)) {
       echo "{$prefecture}の県庁所在地は、{$kanto[$prefecture]}です。\n";
   } else {
