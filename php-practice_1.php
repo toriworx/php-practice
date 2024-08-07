@@ -101,11 +101,11 @@ $other_prefectures = array(
   "大阪府" => "大阪市"
 );
 
-$main_prefectures = array("東京都", "神奈川県", "千葉県", "埼玉県", "栃木県", "群馬県", "茨城県", "愛知県", "大阪府");
+$main_prefectures = array_merge($kanto,$other_prefectures);
 
-foreach ($main_prefectures as $prefecture) {
+foreach ($main_prefectures as $prefecture => $city) {
   if (array_key_exists($prefecture, $kanto)) {
-      echo "{$prefecture}の県庁所在地は、{$kanto[$prefecture]}です。\n";
+      echo "{$prefecture}の県庁所在地は、{$city}です。\n";
   } else {
       echo "{$prefecture}は関東地方ではありません。\n";
   }
