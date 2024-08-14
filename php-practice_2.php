@@ -51,6 +51,7 @@ foreach ($personalInfos as $index => $person) {
 }
 ?>
 
+<?php
 //問題3
 $ageList = [25, 30, 18];
 
@@ -102,9 +103,9 @@ class Student_sub
         $this->studentName = $name;
     }
 
-    public function attend()
+    public function attend($subject)
     {
-        echo '授業に出席しました。';
+        echo $this->studentName . 'は' . $subject . 'の授業に参加しました。学籍番号：' . $this->studentId;
     }
 
     public function showStudentInfo()
@@ -113,7 +114,7 @@ class Student_sub
     }
 }
 
-$student = new Student_sub(120, '山田');
+$yamada = new Student_sub(120, '山田');
 $yamada->attend('PHP');
 ?>
 
